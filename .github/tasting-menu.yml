@@ -1,5 +1,8 @@
 pull_request:
   merged:
-    - neverendingqs
-    - neverendingqs-student
-    - a414c790-406a-4e43-b103-64dad355ddfa
+    - username: neverendingqs
+      frequency: 0.25
+    - username: neverendingqs-student
+      frequency: 0.25
+    - username: a414c790-406a-4e43-b103-64dad355ddfa
+      frequency: 0.25
