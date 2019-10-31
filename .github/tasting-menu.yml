@@ -2,9 +2,9 @@ pull_request:
   merged:
     - username: neverendingqs
       frequency: 1
-    - username: neverendingqs-sandbox
-      frequency: 0.25
-    - username: a414c790-406a-4e43-b103-64dad355ddfa
+    - username: neverendingqs-sandbox-student
       frequency: 1
+    - username: a414c790-406a-4e43-b103-64dad355ddfa
+      frequency: 0.25
     - username: turtleman270
       frequency: 1
