@@ -13,12 +13,15 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            if(context.payload.sender.login === 'neverendingqs') {
+            const label = 'awaiting response';
+            const isContributor = context.payload.sender.login === 'neverendingqs';
+            const hasLabel = context.payload.issues.labels.includes(label);
+            if(isContributor && hasLabel) {
               github.issues.removeLabel({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
                 name: 'awaiting response',
-              })
+              });
             }
 
