@@ -6,6 +6,7 @@ on:
 
 jobs:
   remove-label:
+    name: Removes label used for tracking issues that a contributor is awaiting a response.
     runs-on: ubuntu-latest
 
     steps:
