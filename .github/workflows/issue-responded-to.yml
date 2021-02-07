@@ -15,7 +15,9 @@ jobs:
           script: |
             const label = 'awaiting response';
             const isContributor = context.payload.sender.login === 'neverendingqs';
-            const hasLabel = context.payload.issue.labels.includes(label);
+            const hasLabel = context.payload.issue.labels
+              .map(({ name }) => name)
+              .includes(label);
             
             console.log(JSON.stringify({
               labels: context.payload.issue.labels,
