@@ -16,6 +16,12 @@ jobs:
             const label = 'awaiting response';
             const isContributor = context.payload.sender.login === 'neverendingqs';
             const hasLabel = context.payload.issue.labels.includes(label);
+            
+            console.log(JSON.stringify({
+              labels: context.payload.issue.labels,
+              login: context.payload.sender.login
+            });
+            
             if(isContributor && hasLabel) {
               github.issues.removeLabel({
                 owner: context.repo.owner,
